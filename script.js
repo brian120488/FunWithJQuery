@@ -31,8 +31,11 @@ $(document).ready(function(){
 	}
 
 	//Challenge 4
-	$(".emote-name").click(yeet)
+	$(".emote-name").click(yeet);
+
 	function yeet(){
-		$(".emote-info").slideToggle();
+		let name = $(this)[0].id.substring(0, $(this)[0].id.length - 4);
+		let name1 = name + "info";
+		$("#" + name1).slideToggle();
 	}
 });
